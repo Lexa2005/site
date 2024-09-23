@@ -1,0 +1,401 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Устанавливаем минимальную высоту на всю высоту экрана */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    border-bottom: 2px solid #ff6f61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+nav ul li button {
+    background-color: #fff;
+    color: #ff6f61;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li button:hover {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Занимаем оставшееся пространство */
+}
+
+footer {
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    padding: 10px 20px;
+    border-top: 2px solid #ff6f61;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для слайдера */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 300px;
+    border: 2px solid #ff6f61;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.slide h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.slide p {
+    color: #666;
+    font-size: 16px;
+}
+
+.slide a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.slide a:hover {
+    background-color: #ffcc00;
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea, button {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6f61;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* Стили для карточек животных */
+.found-pets {
+    margin-bottom: 20px;
+}
+
+.found-pets-container {
+    display: flex;
+    flex-wrap: nowrap; /* Не переносить карточки на новую строку */
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если карточки не помещаются */
+    gap: 20px; /* Отступ между карточками */
+    padding: 20px 0;
+}
+
+.pet-card {
+    flex: 0 0 calc(25% - 20px); /* Фиксированная ширина для каждой карточки */
+    border: 2px solid #ff6f61;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: inline-block; /* Выстраивание в ряд */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.pet-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.pet-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+.pet-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pet-card a:hover {
+    background-color: #ffcc00;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+    border: 2px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Стили для пагинации */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .pet-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Стили для раздела "О нас" */
+.about-us {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-us img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Стили для раздела "Отзывы" */
+.reviews {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.reviews h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.review-slide {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.review-slide p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.review-slide p:last-child {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Стили для раздела "Найденные животные" */
+.found-pets h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Стили для раздела "Активный поиск" */
+.active-search {
+    margin-bottom: 20px;
+}
+
+.active-search h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.active-search .pet-card {
+    width: 100%;
+    margin-right: 0;
+}
