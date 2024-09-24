@@ -395,7 +395,60 @@ table tr:nth-child(even) {
     margin-bottom: 10px;
 }
 
+.active-search-container {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос карточек на новую строку */
+    gap: 20px; /* Отступ между карточками */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    max-width: 1200px; /* Ограничиваем максимальную ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+}
+
 .active-search .pet-card {
+    flex: 1 1 calc(33.333% - 20px); /* Равномерно распределяем карточки по ширине */
+    max-width: calc(33.333% - 20px); /* Ограничиваем максимальную ширину карточки */
+    border: 2px solid #ff6f61;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: inline-block; /* Выстраивание в ряд */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+}
+
+.active-search .pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.active-search .pet-card img {
     width: 100%;
-    margin-right: 0;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.active-search .pet-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.active-search .pet-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+.active-search .pet-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.active-search .pet-card a:hover {
+    background-color: #ffcc00;
 }
